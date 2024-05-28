@@ -1,4 +1,20 @@
+import { hostname } from "os";
+
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+  images: {
+    remotePatterns: [
+      {
+        hostname: "images.unsplash.com",
+      },
+      {
+        hostname: "plus.unsplash.com",
+      },
+      {
+        hostname: "flowbite.s3.amazonaws.com",
+      },
+    ],
+  },
+};
 
 export default nextConfig;
