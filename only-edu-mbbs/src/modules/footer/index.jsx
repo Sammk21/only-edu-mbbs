@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import {
   FaFacebook,
   FaInstagram,
@@ -115,9 +116,15 @@ const Footer = () => {
               </li>
             </ul>
             <ul className="flex text-xs gap-x-6">
-              <li>Terms and condition</li>
-              <li>Privacy policy</li>
-              <li>Contact us</li>
+              <li>
+                <Link href="/terms-and-condition">Terms and condition</Link>
+              </li>
+              <li>
+                <Link href="/privacy-policy">Privacy policy</Link>
+              </li>
+              <li>
+                <Link href="/contact-us">Contact us</Link>
+              </li>
             </ul>
           </div>
         </section>

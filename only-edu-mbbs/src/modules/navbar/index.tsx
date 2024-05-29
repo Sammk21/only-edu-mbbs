@@ -25,6 +25,7 @@ interface MenuItem {
 const menuItems: MenuItem[] = [
   {
     title: "Home",
+    href: "/",
   },
 
   {
@@ -55,14 +56,15 @@ const menuItems: MenuItem[] = [
   },
   {
     title: "About",
-    submenu: [
-      {
-        title: "Who we are",
-      },
-      {
-        title: "Our values",
-      },
-    ],
+    href: "/about-us",
+    // submenu: [
+    //   {
+    //     title: "Who we are",
+    //   },
+    //   {
+    //     title: "Our values",
+    //   },
+    // ],
   },
   {
     title: "Test Series",
