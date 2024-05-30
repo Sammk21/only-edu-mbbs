@@ -49,9 +49,6 @@ const menuItems: MenuItem[] = [
           { title: "Lithuania", href: "/mbbs-lithuania" },
         ],
       },
-      {
-        title: "SEO",
-      },
     ],
   },
   {
