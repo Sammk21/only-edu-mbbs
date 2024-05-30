@@ -64,7 +64,12 @@ const menuItems: MenuItem[] = [
     // ],
   },
   {
-    title: "Test Series",
+    title: "Blogs",
+    href: "/blog",
+  },
+  {
+    title: "Contact Us",
+    href: "/contact-us",
   },
 ];
 
