@@ -39,7 +39,7 @@ export default function PostList(
                 ? "aspect-[5/4]"
                 : "aspect-square"
             )}
-            href={"#"}
+            href={"/blog/post/@sam"}
           >
             {true ? (
               <Image
