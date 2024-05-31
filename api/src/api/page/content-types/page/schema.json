@@ -1,0 +1,79 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pages",
+  "info": {
+    "singularName": "page",
+    "pluralName": "pages",
+    "displayName": "Page",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "slug": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "string",
+      "required": false
+    },
+    "blocks": {
+      "type": "dynamiczone",
+      "components": [
+        "blocks.cta-command-line",
+        "blocks.cta",
+        "blocks.faq",
+        "blocks.features-with-images",
+        "blocks.features",
+        "blocks.hero",
+        "blocks.pricing",
+        "blocks.related-articles",
+        "blocks.related-restaurants",
+        "blocks.testimonial",
+        "blocks.exp-block",
+        "blocks.team",
+        "blocks.services",
+        "blocks.why-us",
+        "shared.video-player",
+        "blocks.why-abroad",
+        "blocks.eligibility-table",
+        "blocks.top-countries-data",
+        "blocks.popular-courses",
+        "blocks.why-mbbs-abroad",
+        "blocks.eligibility-card"
+      ],
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.seo"
+    }
+  }
+}
