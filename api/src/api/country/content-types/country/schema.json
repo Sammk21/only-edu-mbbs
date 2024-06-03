@@ -48,6 +48,12 @@
       "type": "component",
       "repeatable": false,
       "component": "blocks.faq"
+    },
+    "university": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::university.university",
+      "inversedBy": "countries"
     }
   }
 }
