@@ -3,20 +3,17 @@ import React from "react";
 const PopularCoursesAbroad = () => {
   return (
     <>
-      <div className="w-full h-12 "></div>
       <section className="px-6 border-y bg-greenDark rounded-t-[28px]  dark:border-y-border  border-y-borderLight dark:text-light py-12">
-        <h4 className="text-center text-4xl py-6 mb-6 ">
+        <h4 className="text-center text-4xl py-6 mb-6 text-white">
           Popular Courses to Study Abroad
         </h4>
-        <p className="mb-3 max-w-5xl mx-auto">
+        <p className="mb-3 max-w-5xl mx-auto text-accent dark:text-gray-400">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus
           accusamus facere tempore totam quo dolorem ad omnis autem! Neque
           soluta cupiditate earum eum tempora quasi, laboriosam hic, omnis
           blanditiis a corporis, consequuntur totam! Veritatis, quaerat ipsum.
         </p>
-        <p className="mb-4 max-w-5xl mx-auto">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-        </p>
+
         <div className="flex justify-between flex-col sm:flex-row max-w-5xl mx-auto">
           <ul className="max-w-md space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400">
             <li className="flex items-center">

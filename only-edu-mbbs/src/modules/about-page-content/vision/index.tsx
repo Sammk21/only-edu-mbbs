@@ -2,8 +2,7 @@ import React from "react";
 
 const Vision = () => {
   return (
-    <>
-      <div className="w-full h-12 "></div>
+    <section className="my-12">
       <section className="px-6 border-y bg-greenDark rounded-t-[28px]  dark:border-y-border  border-y-borderLight dark:text-light py-12">
         <h4 className="text-center text-4xl py-6 mb-6 text-white">
           Our Vision & Mission
@@ -148,7 +147,7 @@ const Vision = () => {
           </ul>
         </div>
       </section>
-    </>
+    </section>
   );
 };
 

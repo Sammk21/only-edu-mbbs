@@ -10,16 +10,18 @@ import {
 } from "react-icons/fa";
 
 import { GoDeviceMobile, GoLocation, GoMail } from "react-icons/go";
+import CallToAction from "./call-to-action";
 
 const Footer = () => {
   return (
     <footer
       style={{ clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)" }}
-      className=" w-full rounded-t-[28px] pt-12 z-10 shadow-inner mt-1"
+      className=" w-full rounded-t-[28px]  z-10  mt-1"
     >
+      <CallToAction />
       <div className="h-full w-full flex justify-center items-center">
         <section className="w-[99%] bottom-0   mx-auto flex flex-col rounded-3xl  bg-light z-0">
-          <div className="px-14 py-1 row-span-4">
+          <div className="sm:px-14 px-4 py-1 row-span-4">
             <div className="row flex-col gap-y-9 sm:flex-row flex justify-between">
               <div className="flex-col">
                 <Link href="/" className="logo">

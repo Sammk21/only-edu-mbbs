@@ -1,37 +1,12 @@
-"use client";
+import StudyIndiaPage from "@/modules/study-india-page-content";
 import React from "react";
-import {
-  Disclosure,
-  DisclosureButton,
-  DisclosurePanel,
-} from "@headlessui/react";
-import TopUniRail from "@/modules/top-uni-rail";
-import { IoIosArrowForward } from "react-icons/io";
-import TopCountryRail from "@/modules/top-country-rail";
-import VideoPlayer from "@/modules/video-player";
-import WhyAbroad from "@/modules/aborad-page-content/why-aborad";
-import ElegibilityCriteriaTable from "@/modules/aborad-page-content/elegibility-criteria-table";
-import CountrySelect from "@/modules/aborad-page-content/countries-select";
-import PopularCoursesAbroad from "@/modules/aborad-page-content/popular-courses-abroad";
-import QuestionDropdown from "@/modules/questions-dropdown";
 
-// import required modules
-
-const StudyIndia = () => {
+const StudyIn = () => {
   return (
-    <>
-      <section className="pt-28 text-dark container mx-auto overflow-hidden ">
-        <CountrySelect />
-        <VideoPlayer />
-        <WhyAbroad />
-        <ElegibilityCriteriaTable />
-      </section>
-      <TopCountryRail />
-      <PopularCoursesAbroad />
-      <TopUniRail />
-      <QuestionDropdown />
-    </>
+    <section className="pt-28 text-dark container mx-auto overflow-hidden">
+      <StudyIndiaPage />
+    </section>
   );
 };
 
-export default StudyIndia;
+export default StudyIn;

@@ -69,7 +69,7 @@ const menuItems: MenuItem[] = [
   },
   {
     title: "Contact Us",
-    href: "/contact-us",
+    href: "/contact-us ",
   },
 ];
 
@@ -89,7 +89,7 @@ const Navbar = () => {
           isScrolled ? "h-0" : "h-[2rem]"
         }`}
       >
-        <div className="flex gap-5 items-center h-full justify-between px-16  ">
+        <div className="flex gap-5 items-center h-full justify-between sm:px-16 px-4 ">
           <ul className="w-full flex justify-between  text-xs  sm:text-sm">
             <li>info@onlyeducation.in</li>
             <li>+91 9898989898</li>

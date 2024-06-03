@@ -53,7 +53,7 @@ const posts = [
 
 export default function Testimonials() {
   return (
-    <div className="py-12 ">
+    <div className="my-12 ">
       <div className="mx-auto max-w-7xl px-6 lg:px-8 z-8">
         <div className="">
           <h4 className="text-center text-4xl py-6 mb-6 ">What Students Say</h4>

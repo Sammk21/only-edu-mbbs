@@ -3,7 +3,7 @@ import { GoDeviceMobile, GoLocation, GoMail } from "react-icons/go";
 
 const ContactUsPageContent = () => {
   return (
-    <section className="py-12 prose lg:max-w-[85%] lg:m-auto px-6 lg:px-0">
+    <section className="lg:my-12 prose lg:max-w-[85%] lg:m-auto px-6 lg:px-0">
       <main className="grid grid-cols-1 gap-4 lg:grid-cols-2">
         <div className="flex-col h-full  flex gap-y-5 ">
           <li className="flex gap-x-3 items-center">

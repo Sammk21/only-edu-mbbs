@@ -7,7 +7,7 @@ interface Props {
 
 const ElegibilityCriteria = ({ name }: Props) => {
   return (
-    <div className="text-dark dark:text-light mt-12">
+    <div className="text-dark dark:text-light py-6 my-6">
       <h4 className="leading-none text-4xl mb-6 text-center text-dark dark:text-light">
         {" "}
         {/** FETCH DYNAMIC NAME*/}

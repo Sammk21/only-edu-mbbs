@@ -6,7 +6,7 @@ interface Props {
 
 const InfoTableLayout = ({ title }: Props) => {
   return (
-    <section className="pt-12">
+    <section className="py-6 my-6">
       <h4 className="text-4xl text-center text-dark mb-6  dark:text-light ">
         {title}
       </h4>

@@ -3,7 +3,7 @@ import React from "react";
 import Image from "next/image";
 const BannerImage = () => {
   return (
-    <section className="w-[99%] mx-auto">
+    <section className="w-[99%] mx-auto ">
       <div className="relative">
         <div className="relative overflow-hidden h-[400px] w-full rounded-t-3xl">
           <Image

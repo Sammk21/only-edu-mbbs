@@ -2,7 +2,7 @@ import React from "react";
 
 const PrivacyPolicyContent = () => {
   return (
-    <section className="py-12 prose lg:max-w-[85%] lg:m-auto px-6 lg:px-0">
+    <section className="lg:my-12 prose lg:max-w-[85%] lg:m-auto px-6 lg:px-0">
       <h1>Privacy Policy</h1>
       <p className="text-accent">
         At onlyeducation.in, accessible from https://onlyeducation.in/, one of

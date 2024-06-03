@@ -3,7 +3,7 @@ import React from "react";
 
 const CampusHighlight = () => {
   return (
-    <section className="mt-12">
+    <section className="py-6 my-6">
       <h2 className="text-4xl font-medium text-center mb-6">
         Campus highlight
       </h2>

@@ -2,7 +2,7 @@ import React from "react";
 
 const DocumentRquired = () => {
   return (
-    <section className="px-6 container mx-auto border-y rounded-3xl  dark:border-y-border  text-dark border-y-borderLight dark:text-light py-12">
+    <section className="px-6 container mx-auto border-y rounded-3xl  dark:border-y-border  text-dark border-y-borderLight dark:text-light py-12 mt-16 ">
       <h4 className="text-center text-4xl py-6 mb-6 font-medium">
         Document's Required
       </h4>

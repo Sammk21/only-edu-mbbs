@@ -5,7 +5,7 @@ import { TbWorldDown, TbWorldHeart } from "react-icons/tb";
 
 const FlowDiagram = () => {
   return (
-    <section className="py-12">
+    <section className="py-6 mt-6  mb-20">
       <p className="text-center text-dark dark:text-light pt-6 text-xl font-semibold">
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione maxime
         amet asperiores.

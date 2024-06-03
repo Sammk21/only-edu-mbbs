@@ -7,7 +7,7 @@ import { MdOutlineArrowRightAlt } from "react-icons/md";
 
 const TopCountryRail = () => {
   return (
-    <div className="sm:px-12 pt-12 px-2">
+    <div className="sm:px-12 py-6 my-6 px-2">
       <h4 className="font-semibold text-dark dark:text-light text-3xl sm:text-4xl md:text-5xl mb-10 flex-col items-center flex sm:flex-row">
         <span className="mb-2">Top Countries</span>
         <span className="sm:text-lg text-sm font-light text-accent sm:ml-2">
@@ -180,6 +180,7 @@ const TopCountryRail = () => {
           <MdOutlineArrowRightAlt />
         </span>
       </span>
+      <div className="h-4"></div>
     </div>
   );
 };
