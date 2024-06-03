@@ -68,6 +68,12 @@
       "type": "component",
       "repeatable": true,
       "component": "blocks.faq"
+    },
+    "countries": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::country.country",
+      "mappedBy": "university"
     }
   }
 }
