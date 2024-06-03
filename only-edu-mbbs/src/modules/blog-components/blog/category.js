@@ -1,7 +1,9 @@
 import Link from "next/link";
 import Label from "@/modules/blog-components/ui/label";
 
-export default function CategoryLabel({ nomargin = false }) {
+export default function CategoryLabel({ nomargin = false, category }) {
+  console.log(category);
+
   return (
     <div className="flex gap-3">
       {/* {categories?.length && */}
@@ -13,17 +15,7 @@ export default function CategoryLabel({ nomargin = false }) {
       >
         <Label nomargin={nomargin} color={"blue"}>
           {/* {category.title} */}
-          Design
-        </Label>
-      </Link>
-      <Link
-        // href={`/category/${category.slug.current}`}
-        href={"#"}
-        // key={index}
-      >
-        <Label nomargin={nomargin} bgcolor={"green"} color={"blue"}>
-          {/* {category.title} */}
-          Dev
+          {category.name}
         </Label>
       </Link>
       {/* ))} */}

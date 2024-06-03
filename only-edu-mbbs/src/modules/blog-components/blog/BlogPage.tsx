@@ -2,53 +2,23 @@ import React from "react";
 import Container from "@/modules/blog-components/container";
 import PostList from "@/modules/blog-components/postlist";
 import Link from "next/link";
-import { getStrapiData } from "@/utils/utils";
+import { BlogListResponse } from "@/types/types";
 
-export default function BlogPage() {
+export default function BlogPage({ data }: BlogListResponse) {
   return (
     <Container>
       <h1>Only Education Blogs</h1>
       <div className="grid gap-10 md:grid-cols-2 lg:gap-10  ">
-        <PostList
-          key={0}
-          //   post={}
-          //   aspect="landscape"
-          //   preloadImage={true}
-        />
-        <PostList
-          key={0}
-          //   post={}
-          //   aspect="landscape"
-          //   preloadImage={true}
-        />
+        {data.map((item) => (
+          <PostList
+            key={item.id}
+            post={item}
+            //   aspect="landscape"
+            //   preloadImage={true}
+          />
+        ))}
       </div>
-      <div className="mt-10 grid gap-10 md:grid-cols-2 lg:gap-10 xl:grid-cols-3 ">
-        <PostList
-        // key={post._id}
-        // post={post}
-        // aspect="square"
-        />
-        <PostList
-        // key={post._id}
-        // post={post}
-        // aspect="square"
-        />
-        <PostList
-        // key={post._id}
-        // post={post}
-        // aspect="square"
-        />
-        <PostList
-        // key={post._id}
-        // post={post}
-        // aspect="square"
-        />
-        <PostList
-        // key={post._id}
-        // post={post}
-        // aspect="square"
-        />
-      </div>
+
       <div className="mt-10 flex justify-center mb-6">
         <Link
           href="/archive"

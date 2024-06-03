@@ -6,21 +6,24 @@ import { cx } from "@/utils/all";
 // import { PhotoIcon } from "@heroicons/react/24/outline";
 import CategoryLabel from "@/modules/blog-components/blog/category";
 
-export default function PostList(
-  {
-    // post,
-    // aspect,
-    // minimal,
-    // pathPrefix,
-    // preloadImage,
-    // fontSize,
-    // fontWeight
-  }
-) {
+export default function PostList({
+  post,
+  // aspect,
+  // minimal,
+  // pathPrefix,
+  // preloadImage,
+  // fontSize,
+  // fontWeight
+}) {
   // const imageProps = post?.mainImage ? urlForImage(post.mainImage) : null;
   // const AuthorimageProps = post?.author?.image
   //   ? urlForImage(post.author.image)
   //   : null;
+
+  const image = post.image.url;
+
+  const imageUrl = "http://localhost:1337";
+
   return (
     <>
       <div className={cx("group cursor-pointer grid gap-1  ")}>
@@ -43,7 +46,7 @@ export default function PostList(
           >
             {true ? (
               <Image
-                src="https://images.unsplash.com/photo-1714779573259-216b0cf746be?q=80&w=3432&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                src={imageUrl + image}
                 // {...(post.mainImage.blurDataURL && {
                 //   placeholder: "blur",
                 //   blurDataURL: post.mainImage.blurDataURL
@@ -64,7 +67,8 @@ export default function PostList(
 
         <div className={cx("flex items-center")}>
           <div>
-            <CategoryLabel /> {/**nomargin={minimal}  */}
+            <CategoryLabel category={post.category} />{" "}
+            {/**nomargin={minimal}  */}
             <h2
               className={cx(
                 "text-2xl"
@@ -88,8 +92,7 @@ export default function PostList(
       group-hover:bg-[length:100%_10px]
       dark:from-purple-800 dark:to-purple-900"
                 >
-                  {/* {post.title} */} Architectural Engineering Wonders of the
-                  modern era for your Inspiration
+                  {post.title}
                 </span>
               </Link>
             </h2>
