@@ -2,7 +2,7 @@ import React from "react";
 
 const MbbsAbroadInfo = () => {
   return (
-    <div className=" md:px-36  justify-center flex flex-col-reverse  my-12 sm:mb-0 items-center sm:grid sm:grid-cols-5">
+    <div className=" md:px-36  justify-center flex flex-col-reverse  py-6 my-6   sm:mb-0 items-center sm:grid sm:grid-cols-5">
       <div className="col-span-2">
         <h4 className="leading-none text-4xl mb-8 text-dark dark:text-light ">
           MBBS Abroad{" "}

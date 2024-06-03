@@ -4,7 +4,7 @@ import { FaEarthAsia } from "react-icons/fa6";
 
 const UniRanking = () => {
   return (
-    <section className="py-12 bg-greenDark rounded-2xl text-light container mx-auto">
+    <section className="py-12 my-12 bg-greenDark rounded-2xl text-light container mx-auto">
       <h4 className="text-center text-3xl font-medium mb-6">Ranking</h4>
       <p className="text-center max-w-5xl mx-auto mb-5">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui

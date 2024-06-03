@@ -1,11 +1,14 @@
 import React from "react";
 import Container from "@/modules/blog-components/container";
 import PostList from "@/modules/blog-components/postlist";
+import Postlistright from "@/modules/blog-components/postlistright";
 import Link from "next/link";
 import { BlogListResponse } from "@/types/types";
 
 export default function BlogPage({ data }: BlogListResponse) {
   return (
+
+       
     <Container>
       <h1>Only Education Blogs</h1>
       <div className="grid gap-10 md:grid-cols-2 lg:gap-10  ">
@@ -26,9 +29,14 @@ export default function BlogPage({ data }: BlogListResponse) {
         >
           <span>View all Posts</span>
         </Link>
+
       </div>
     </Container>
   );
 };
+
+export default BlogPage;
+
+
 
 

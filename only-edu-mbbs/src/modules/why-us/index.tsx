@@ -2,7 +2,7 @@ import React from "react";
 
 const WhyUs = () => {
   return (
-    <section className=" dark:text-light  text-dark py-12 ">
+    <section className=" dark:text-light  text-dark pb-12 my-8">
       <div className="px-6 container mx-auto">
         <h1 className="text-5xl font-semibold">Why Only Education</h1>
         <div className="md:grid md:grid-cols-2">

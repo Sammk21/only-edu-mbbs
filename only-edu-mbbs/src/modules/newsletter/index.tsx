@@ -4,7 +4,7 @@ import { TbHandMiddleFinger } from "react-icons/tb";
 
 const NewsLetter = () => {
   return (
-    <div className="relative isolate overflow-hidden bg-greenDark py-16 sm:py-24 lg:py-32 container mx-auto rounded-3xl">
+    <div className="relative isolate overflow-hidden bg-greenDark pb-16 my-8 sm:py-24 lg:py-32 container mx-auto rounded-3xl">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2">
           <div className="max-w-xl lg:max-w-lg">

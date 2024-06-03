@@ -2,7 +2,7 @@ import React from "react";
 
 const OurServices = () => {
   return (
-    <section className="bg-greenDark relative dark:bg-foreground text-light    dark:shadow-accent/20  rounded-[30px] py-12 ">
+    <section className="bg-greenDark relative dark:bg-light text-light shadow-2xl   dark:shadow-accent/20 dark:text-dark rounded-[30px] py-12 my-8">
       <div className="px-6 container mx-auto ">
         <h1 className=" text-5xl mb-8 sm:text-6xl z-10">Our Services</h1>
         <div className="md:px-36 justify-center items-center sm:grid  mb-12 sm:mb-0 sm:grid-cols-5">

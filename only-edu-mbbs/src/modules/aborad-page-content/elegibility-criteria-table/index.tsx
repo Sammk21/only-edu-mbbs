@@ -2,7 +2,7 @@ import React from "react";
 
 const ElegibilityCriteriaTable = () => {
   return (
-    <section className="pt-12">
+    <section className="py-6 my-6 ">
       <h4 className="text-4xl text-center text-dark  dark:text-light ">
         Eligibility Criteria for UG or PG Courses{" "}
       </h4>

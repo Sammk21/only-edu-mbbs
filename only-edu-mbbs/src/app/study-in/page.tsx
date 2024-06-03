@@ -1,7 +1,12 @@
+import StudyIndiaPage from "@/modules/study-india-page-content";
 import React from "react";
 
-const StudyIndia = () => {
-  return <div className="py-28">StudyIndia</div>;
+const StudyIn = () => {
+  return (
+    <section className="pt-28 text-dark container mx-auto overflow-hidden">
+      <StudyIndiaPage />
+    </section>
+  );
 };
 
-export default StudyIndia;
+export default StudyIn;

@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import {
   FaFacebook,
   FaInstagram,
@@ -9,30 +10,23 @@ import {
 } from "react-icons/fa";
 
 import { GoDeviceMobile, GoLocation, GoMail } from "react-icons/go";
+import CallToAction from "./call-to-action";
 
 const Footer = () => {
   return (
     <footer
       style={{ clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)" }}
-      className=" w-full rounded-t-[28px] pt-12 z-10 shadow-inner "
+      className=" w-full rounded-t-[28px]  z-10  mt-1"
     >
+      <CallToAction />
       <div className="h-full w-full flex justify-center items-center">
         <section className="w-[99%] bottom-0   mx-auto flex flex-col rounded-3xl  bg-light z-0">
-          <div className="relative overflow-hidden h-[300px] w-full rounded-t-3xl">
-            <Image
-              src={
-                "https://images.unsplash.com/34/BA1yLjNnQCI1yisIZGEi_2013-07-16_1922_IMG_9873.jpg?q=80&w=3271&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              }
-              fill={true}
-              className="object-cover object-center"
-            />
-          </div>
-          <div className="px-14 py-12 row-span-4">
+          <div className="sm:px-14 px-4 py-1 row-span-4">
             <div className="row flex-col gap-y-9 sm:flex-row flex justify-between">
               <div className="flex-col">
-                <a href="https://avvr.nl" className="logo">
+                <Link href="/" className="logo">
                   <span className="text-5xl">Only edu</span>
-                </a>
+                </Link>
               </div>
               <div className="flex-col flex text-sm text-dark mb-8">
                 <ul>
@@ -115,9 +109,15 @@ const Footer = () => {
               </li>
             </ul>
             <ul className="flex text-xs gap-x-6">
-              <li>Terms and condition</li>
-              <li>Privacy policy</li>
-              <li>Contact us</li>
+              <li>
+                <Link href="/terms-and-condition">Terms and condition</Link>
+              </li>
+              <li>
+                <Link href="/privacy-policy">Privacy policy</Link>
+              </li>
+              <li>
+                <Link href="/contact-us">Contact us</Link>
+              </li>
             </ul>
           </div>
         </section>

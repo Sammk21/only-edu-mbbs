@@ -15,29 +15,33 @@ import React from "react";
 const StudyUniversity = () => {
   return (
     <div className="pt-32 mb-16">
-      <GlobalProfileLayout />\
-      <div className="py-4 bg-greenDark">
+      <GlobalProfileLayout />
+
+      <div className="py-4 bg-greenDark my-12">
         <div className="flex  items-center justify-center gap-x-5  text-light">
-          <h1 className="text-4xl">Get connected with our experts </h1>
-          <button className="px-4  py-2 mt-2 rounded-full border border-borderLight dark:border-border  bg-blue-500 text-light text-sm hover:shadow-[1px_1px_0px_0px_rgba(0,0,0)] transition duration-200">
-            now
+          <h1 className="lg:text-4xl text-sm/6">
+            Get connected with our experts{" "}
+          </h1>
+          <button className="px-4  py-2 mt-2 rounded-2xl border border-borderLight dark:border-border  bg-blue-500 text-light text-sm hover:shadow-[1px_1px_0px_0px_rgba(0,0,0)] transition duration-200">
+            Enquire Now
           </button>
         </div>
-        <p className="text-center text-accent">For better guidence</p>
+        {/* <p className="text-center text-accent">For better guidence</p> */}
       </div>
       <div className="mt-6 ">
-        <h2 className="text-center text-4xl font-medium mb-4 dark:text-light">
-          Overview
-        </h2>
-        <p className="text-center max-w-6xl w-full mx-auto dark:text-accent">
-          {" "}
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed harum
-          soluta nostrum architecto dolorum ullam voluptatibus molestias commodi
-          laudantium nulla assumenda possimus sapiente non rerum excepturi
-          quisquam delectus, perferendis incidunt obcaecati error culpa aliquam?
-          Sed, veritatis!
-        </p>
-
+        <div className="my-8">
+          <h2 className="text-center text-4xl font-medium mb-4 dark:text-light">
+            Overview
+          </h2>
+          <p className="text-center max-w-6xl w-full mx-auto dark:text-accent">
+            {" "}
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed harum
+            soluta nostrum architecto dolorum ullam voluptatibus molestias
+            commodi laudantium nulla assumenda possimus sapiente non rerum
+            excepturi quisquam delectus, perferendis incidunt obcaecati error
+            culpa aliquam? Sed, veritatis!
+          </p>
+        </div>
         <UniHighlights />
         <WhyThisUni />
         <UniRanking />

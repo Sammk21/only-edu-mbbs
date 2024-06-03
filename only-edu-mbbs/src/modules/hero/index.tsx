@@ -18,7 +18,7 @@ interface HeroProps {
 
 const Hero = ({ data }: HeroProps) => {
   return (
-    <section className="text-dark dark:text-light  p-6 md:p-12  min-w-full  z-0 sm:grid sm:grid-cols-8 ">
+    <section className="text-dark dark:text-light  p-6   md:p-12  min-w-full  z-0 sm:grid sm:grid-cols-8 ">
       <div className="sm:col-span-5 h-full w-full flex  flex-col">
         <h1 className="text-6xl tracking-tight">{data.header.title}</h1>
         <div className="flex justify-start flex-col w-full">

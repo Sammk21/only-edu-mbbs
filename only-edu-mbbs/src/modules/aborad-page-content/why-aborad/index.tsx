@@ -4,7 +4,7 @@ import FlowDiagram from "../flow-diagram";
 const WhyAbroad = () => {
   return (
     <>
-      <section className="text-dark dark:text-light ">
+      <section className="text-dark dark:text-light  my-6">
         <h4 className="text-center text-4xl py-6 mb-6 ">
           Why Study Abroad is the best for indian Students
         </h4>

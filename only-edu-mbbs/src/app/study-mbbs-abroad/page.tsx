@@ -7,7 +7,7 @@ import React from "react";
 
 const StudyAbroad = () => {
   return (
-    <div className="py-28 container mx-auto px-6">
+    <div className="pt-28 container mx-auto px-6">
       <CountrySelect />
       <MbbsAbroadInfo />
       <ElegibilityCriteria name={"MBBS"} />

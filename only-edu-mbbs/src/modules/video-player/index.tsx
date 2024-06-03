@@ -2,7 +2,7 @@ import React from "react";
 
 const VideoPlayer = () => {
   return (
-    <section className="container mx-auto py-6 px-2">
+    <section className="container mx-auto py-6 my-6 px-2">
       <div className="h-[300px] sm:h-[350px] md:h-[400px] lg:h-[450px] w-full relative ">
         <video
           autoPlay={true}

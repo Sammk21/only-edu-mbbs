@@ -9,8 +9,7 @@ import { IoIosArrowForward } from "react-icons/io";
 const QuestionDropdown = () => {
   return (
     <>
-      <div className="w-full h-12 text-dark dark:text-light"></div>
-      <section className="   px-2 sm:px-6">
+      <section className=" py-6 my-6  px-2 sm:px-6">
         <h4 className="text-center text-2xl text-dark dark:text-light">
           Frequently asked questions
         </h4>
