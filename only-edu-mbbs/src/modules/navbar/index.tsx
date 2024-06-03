@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   motion,
   AnimatePresence,
@@ -13,63 +13,17 @@ import {
   FaPinterest,
   FaTwitter,
 } from "react-icons/fa";
-import { HoveredLink, Menu, MenuItem } from "./components/Menulist";
 import { MenuItems } from "./components/MenuItems";
+import Link from "next/link";
+import { Navigation, Dropdown, Links } from "@/types/types";
+import { DropDownItems } from "./components/Dropdown";
 
-interface MenuItem {
-  title: string;
-  href?: string;
-  submenu?: MenuItem[];
+interface NavbarProps {
+  navigation: Navigation;
+  dropdown: Dropdown[];
 }
 
-const menuItems: MenuItem[] = [
-  {
-    title: "Home",
-  },
-
-  {
-    title: "Services",
-    submenu: [
-      {
-        title: "Mbbs India",
-      },
-      {
-        title: "Mbbs Abroad",
-        submenu: [
-          { title: "Russia", href: "/mbbs-russia" },
-          { title: "China", href: "/mbbs-china" },
-          { title: "Ukraine", href: "/mbbs-ukraine" },
-          { title: "Philippines", href: "/mbbs-philippines" },
-          { title: "Georgia", href: "/mbbs-georgia" },
-          { title: "Poland", href: "/mbbs-poland" },
-          { title: "Kazakhstan", href: "/mbbs-kazakhstan" },
-          { title: "Belarus", href: "/mbbs-belarus" },
-          { title: "Bangladesh", href: "/mbbs-bangladesh" },
-          { title: "Lithuania", href: "/mbbs-lithuania" },
-        ],
-      },
-      {
-        title: "SEO",
-      },
-    ],
-  },
-  {
-    title: "About",
-    submenu: [
-      {
-        title: "Who we are",
-      },
-      {
-        title: "Our values",
-      },
-    ],
-  },
-  {
-    title: "Test Series",
-  },
-];
-
-const Navbar = () => {
+const Navbar = ({ navigation, dropdown }: NavbarProps) => {
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
 
   const { scrollY } = useScroll();
@@ -114,17 +68,26 @@ const Navbar = () => {
           isScrolled ? "rounded-t-none h-[4rem] " : "rounded-t-3xl h-[5rem]"
         } `}
       >
-        <span className="font-medium text-2xl">Only edu</span>
+        <Link href="/">
+          <span className="font-medium text-2xl">Only edu</span>
+        </Link>
+
         <div>
           <ul className=" hidden md:flex  text-sm font-normal">
-            <ul className="menus">
-              {" "}
-              {menuItems.map((menu, index) => {
+            <ul className="flex justify-center items-center">
+              {dropdown.map((link: Dropdown) => {
                 const depthLevel = 0;
                 return (
-                  <MenuItems items={menu} key={index} depthLevel={depthLevel} />
+                  <DropDownItems
+                    items={link}
+                    key={link.id}
+                    depthLevel={depthLevel}
+                  />
                 );
-              })}{" "}
+              })}
+              {navigation.links.map((link: Links) => {
+                return <MenuItems items={link} key={link.id} />;
+              })}
             </ul>
           </ul>
           <label className="hamburger md:hidden">
