@@ -1,0 +1,73 @@
+{
+  "kind": "collectionType",
+  "collectionName": "universities",
+  "info": {
+    "singularName": "university",
+    "pluralName": "universities",
+    "displayName": "University",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "Title"
+    },
+    "UniversityProfile": {
+      "type": "component",
+      "repeatable": true,
+      "component": "blocks.profiles"
+    },
+    "CallToAction": {
+      "type": "component",
+      "repeatable": true,
+      "component": "blocks.cta"
+    },
+    "Header": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.header"
+    },
+    "Overview": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.header"
+    },
+    "WhythisUniversity": {
+      "type": "component",
+      "repeatable": true,
+      "component": "blocks.why-us"
+    },
+    "RankComparison": {
+      "type": "component",
+      "repeatable": true,
+      "component": "blocks.rank-comparison"
+    },
+    "EligibilityCriteria": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.eligibility-card"
+    },
+    "DocumentRequired": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.popular-courses"
+    },
+    "FeesStructure": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.eligibility-table"
+    },
+    "Faq": {
+      "type": "component",
+      "repeatable": true,
+      "component": "blocks.faq"
+    }
+  }
+}

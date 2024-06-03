@@ -47,10 +47,10 @@ const BlogPage = () => {
         // aspect="square"
         />
       </div>
-      <div className="mt-10 flex justify-center">
+      <div className="mt-10 flex justify-center mb-6">
         <Link
           href="/archive"
-          className="relative inline-flex items-center gap-1 rounded-md border border-gray-300 bg-white px-3 py-2 pl-4 text-sm font-medium text-gray-500 hover:bg-gray-50 focus:z-20 disabled:pointer-events-none disabled:opacity-40 dark:border-gray-500 dark:bg-gray-800 dark:text-gray-300"
+          className="relative inline-flex items-center gap-1 rounded-full border border-borderLight bg-dark px-3 py-2 pl-4 text-sm font-medium text-light hover:bg-dark/80 focus:z-20 disabled:pointer-events-none disabled:opacity-40 dark:border-border dark:bg-foreground dark:text-light"
         >
           <span>View all Posts</span>
         </Link>
