@@ -66,13 +66,13 @@ export default function PostList() {
               href="#"
               className="flex items-center gap-1 sm:gap-2 text-xs sm:text-sm"
             >
-              <div className="bg-dark/5 rounded-2xl w-fit px-2 py-1 text-[10px] sm:text-sm">
-                Design
+              <div className="bg-dark/5 rounded-2xl w-fit px-2 py-1 text-[10px] sm:text-sm capitalize">
+                design
               </div>
-              <div className="bg-dark/5 rounded-2xl w-fit px-2 py-1 text-[10px] sm:text-sm">
-                Development
+              <div className="bg-dark/5 rounded-2xl w-fit px-2 py-1 text-[10px] sm:text-sm capitalize">
+                development
               </div>
-              <div className="bg-dark/5 rounded-2xl w-fit px-2 py-1 text-[10px] sm:text-sm">
+              <div className="bg-dark/5 rounded-2xl w-fit px-2 py-1 text-[10px] sm:text-sm capitalize">
                 Architecture
               </div>
             </Link>

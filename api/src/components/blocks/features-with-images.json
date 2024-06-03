@@ -15,7 +15,8 @@
     "UniversityData": {
       "type": "component",
       "repeatable": true,
-      "component": "shared.university-card"
+      "component": "shared.university-card",
+      "max": 10
     }
   }
 }

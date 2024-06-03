@@ -9,7 +9,8 @@
     "expBlock": {
       "type": "component",
       "repeatable": true,
-      "component": "shared.exp-block"
+      "component": "shared.exp-block",
+      "max": 5
     }
   }
 }

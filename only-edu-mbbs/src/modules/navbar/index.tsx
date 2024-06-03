@@ -87,14 +87,7 @@ const Navbar = ({ navigation, dropdown }: NavbarProps) => {
                 );
               })}
               {navigation.links.map((link: Links) => {
-                const depthLevel = 0;
-                return (
-                  <MenuItems
-                    items={link}
-                    key={link.id}
-                    depthLevel={depthLevel}
-                  />
-                );
+                return <MenuItems items={link} key={link.id} />;
               })}
             </ul>
           </ul>

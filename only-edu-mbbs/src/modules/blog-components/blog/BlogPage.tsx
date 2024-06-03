@@ -2,7 +2,7 @@ import React from "react";
 import Container from "@/modules/blog-components/container";
 import PostList from "@/modules/blog-components/postlist";
 import Postlistright from "@/modules/blog-components/postlistright";
-
+import Link from "next/link";
 const BlogPage = () => {
   return (
     <Container className="">
@@ -39,5 +39,4 @@ const BlogPage = () => {
     </Container>
   );
 };
-
 export default BlogPage;

@@ -1,21 +1,21 @@
-const path = require('path');
-const util = require('util');
-const fse = require('fs-extra');
-const unzip = require('unzip-stream');
-const crypto = require('crypto');
-const uuid = require('uuid-v4');
+const path = require("path");
+const util = require("util");
+const fse = require("fs-extra");
+const unzip = require("unzip-stream");
+const crypto = require("crypto");
+const uuid = require("uuid-v4");
 
-const zipPath = path.resolve('data.zip');
-const dataPath = path.resolve('data');
-const uploadDataPath = path.join(dataPath, 'uploads');
+const zipPath = path.resolve("data.zip");
+const dataPath = path.resolve("data");
+const uploadDataPath = path.join(dataPath, "uploads");
 
-const uploadPath = path.join(path.resolve('public'), 'uploads');
+const uploadPath = path.join(path.resolve("public"), "uploads");
 
-const tmpPath = path.resolve('.tmp');
+const tmpPath = path.resolve(".tmp");
 
-const dotEnv = path.resolve('.env');
+const dotEnv = path.resolve(".env");
 
-const Database = require('postgres');
+const Database = require("postgres");
 
 // async function dumpSqlite() {
 //   const db = new Database('.tmp/data.db');
@@ -33,11 +33,11 @@ async function updateUid() {
       const rawFile = fse.readFileSync(filePath);
       const packageJSON = JSON.parse(rawFile);
 
-      if (packageJSON.strapi.uuid.includes('FOODADVISOR')) return null;
+      if (packageJSON.strapi.uuid.includes("FOODADVISOR")) return null;
 
       packageJSON.strapi.uuid =
         `FOODADVISOR-${
-          process.env.GITPOD_WORKSPACE_URL ? 'GITPOD-' : 'LOCAL-'
+          process.env.GITPOD_WORKSPACE_URL ? "GITPOD-" : "LOCAL-"
         }` + uuid();
 
       const data = JSON.stringify(packageJSON, null, 2);
@@ -71,8 +71,8 @@ async function seed() {
     await new Promise((resolve) => {
       fse
         .createReadStream(zipPath)
-        .pipe(unzip.Extract({ path: '.' }))
-        .on('close', resolve);
+        .pipe(unzip.Extract({ path: "." }))
+        .on("close", resolve);
     });
   } catch (error) {
     console.log(error);
@@ -98,11 +98,11 @@ async function seed() {
 
   await fse.ensureFile(dotEnv);
   const dotEnvData = fse.readFileSync(dotEnv).toString();
-  if (!dotEnvData.includes('ADMIN_JWT_SECRET')) {
+  if (!dotEnvData.includes("ADMIN_JWT_SECRET")) {
     try {
       await fse.appendFile(
         dotEnv,
-        `ADMIN_JWT_SECRET=${crypto.randomBytes(64).toString('base64')}\n`
+        `ADMIN_JWT_SECRET=${crypto.randomBytes(64).toString("base64")}\n`
       );
     } catch (err) {
       console.log(`Failed to create ${dotEnv}`);

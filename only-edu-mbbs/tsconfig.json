@@ -1,4 +1,4 @@
-{ 
+{
   "compilerOptions": {
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
@@ -21,6 +21,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/modules/footer/index.jsx", "src/modules/navbar/components/MenuItems.jsx", "src/modules/navbar/components/Dropdown.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/modules/footer/index.jsx", "src/modules/navbar/components/MenuItems.jsx", "src/modules/navbar/components/Dropdown.jsx", "src/app/blog/post/[slug]/page.jsx"],
   "exclude": ["node_modules"]
 }
