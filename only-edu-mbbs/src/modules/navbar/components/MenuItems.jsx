@@ -1,97 +1,12 @@
 import Link from "next/link";
-import React, { useEffect, useRef, useState } from "react";
-import { RiArrowDownSLine } from "react-icons/ri";
-import { RiArrowRightSLine } from "react-icons/ri";
+import React from "react";
 
-export const MenuItems = ({ items, depthLevel }) => {
-  const [dropdown, setDropdown] = useState(false);
-  const ref = useRef();
-
-  useEffect(() => {
-    const handler = (event) => {
-      if (dropdown && ref.current && !ref.current.contains(event.target)) {
-        setDropdown(false);
-      }
-    };
-    document.addEventListener("mousedown", handler);
-    document.addEventListener("touchstart", handler);
-    return () => {
-      // Cleanup the event listener
-      document.removeEventListener("mousedown", handler);
-      document.removeEventListener("touchstart", handler);
-    };
-  }, [dropdown]);
-
-  const onMouseEnter = () => {
-    if (window.innerWidth > 960) {
-      setDropdown(true);
-    }
-  };
-
-  const onMouseLeave = () => {
-    if (window.innerWidth > 960) {
-      setDropdown(false);
-    }
-  };
-
+export const MenuItems = ({ items }) => {
   return (
-    <li
-      className="menu-items"
-      ref={ref}
-      onMouseEnter={onMouseEnter}
-      onMouseLeave={onMouseLeave}
-    >
-      {items.subMenuLinks ? (
-        <>
-          <Link
-            href={items.href || "#"}
-            className=" hover:text-dark/80 items-center gap-r-1"
-            type="button"
-            aria-haspopup="menu"
-            aria-expanded={dropdown ? "true" : "false"}
-            onClick={() => setDropdown((prev) => !prev)}
-          >
-            <span className=" flex justify-between items-center">
-              <p>{items.label}</p>{" "}
-              {depthLevel > 0 ? (
-                <RiArrowRightSLine />
-              ) : (
-                <RiArrowDownSLine
-                  className={`mt-[2px] font-semibold transition duration-200 ease-in-out ${
-                    dropdown && "rotate-180"
-                  } `}
-                />
-              )}
-            </span>
-          </Link>
-          <Dropdown
-            depthLevel={depthLevel}
-            submenuLinks={items.subMenuLinks}
-            dropdown={dropdown}
-          />
-        </>
-      ) : (
-        <Link href={items?.href || "#"}>{items.label}</Link>
-      )}
+    <li className="menu-items text-dark hover:text-dark/50">
+      <Link href={items?.href || "#"}>{items.label}</Link>
     </li>
   );
 };
 
-const Dropdown = ({ subMenuLinks, dropdown, depthLevel }) => {
-  console.log(subMenuLinks);
 
-  depthLevel = depthLevel + 1;
-  const dropdownClass = depthLevel > 1 ? "dropdown-submenu" : "";
-  return (
-    <ul
-      className={`dropdown border-borderLight border dark:border-border bg-light dark:bg-dark ${dropdownClass} ${
-        dropdown ? "show" : ""
-      }`}
-    >
-      {" "}
-      {/* {subMenuLinks.map((submenu, index) => (
-        <MenuItems items={submenu} key={index} depthLevel={depthLevel} />
-      ))}{" "} */}
-    </ul>
-  );
-};

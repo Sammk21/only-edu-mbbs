@@ -14,7 +14,8 @@
     "OurServiceInfo": {
       "type": "component",
       "repeatable": true,
-      "component": "shared.our-service-summary"
+      "component": "shared.our-service-summary",
+      "max": 5
     }
   }
 }

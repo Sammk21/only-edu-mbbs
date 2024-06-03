@@ -2,7 +2,9 @@ import React from "react";
 import Container from "@/modules/blog-components/container";
 import PostList from "@/modules/blog-components/postlist";
 import Link from "next/link";
-const BlogPage = () => {
+import { getStrapiData } from "@/utils/utils";
+
+export default function BlogPage() {
   return (
     <Container>
       <h1>Only Education Blogs</h1>
@@ -59,4 +61,4 @@ const BlogPage = () => {
   );
 };
 
-export default BlogPage;
+
