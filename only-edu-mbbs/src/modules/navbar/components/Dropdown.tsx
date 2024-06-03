@@ -3,6 +3,7 @@ import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
 import { RiArrowDownSLine } from "react-icons/ri";
 import { RiArrowRightSLine } from "react-icons/ri";
+import qs from "qs";
 
 interface MenuItemProps {
   items: {
@@ -59,7 +60,7 @@ export const DropDownItems = ({ items, depthLevel }: MenuItemProps) => {
       <>
         <Link
           href={items.href || "#"}
-          className=" hover:text-light/80 dark:text-dark/80 items-center gap-r-1"
+          className="  hover:text-dark/50 dark:text-dark/80 items-center gap-r-1"
           type="button"
           aria-haspopup="menu"
           aria-expanded={dropdown ? "true" : "false"}

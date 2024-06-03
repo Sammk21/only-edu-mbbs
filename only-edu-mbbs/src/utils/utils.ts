@@ -37,3 +37,19 @@ export function flattenAttributes(data:any):any {
 
   return flattened;
 }
+
+export function getStrapiMedia(){}
+
+
+export async function getStrapiData(path: string) {
+  
+  const baseUrl = `http://localhost:1337`;
+  try {
+    const response = await fetch(baseUrl + path, { cache: "no-store" });
+    const data = await response.json();
+    const flattenedData = flattenAttributes(data);
+    return flattenedData;
+  } catch (error) {
+    console.error(error);
+  }
+}

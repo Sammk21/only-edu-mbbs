@@ -9,12 +9,16 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@ckeditor/ckeditor5-build-classic": "^35.3.1",
+    "@ckeditor/ckeditor5-react": "^5.0.2",
     "@headlessui/react": "^2.0.3",
     "@tailwindcss/typography": "^0.5.13",
+    "@types/ckeditor__ckeditor5-build-classic": "^37.0.0",
     "@types/qs": "^6.9.15",
     "clsx": "^2.1.1",
     "framer-motion": "^11.2.5",
     "gsap": "^3.12.5",
+    "html-react-parser": "^5.1.10",
     "next": "14.2.3",
     "qs": "^6.12.1",
     "react": "^18",
