@@ -1,15 +1,28 @@
 import Image from "next/image";
 import React from "react";
 
-const Hero = () => {
+
+interface HeaderProps {
+  id: number;
+  title: string;
+  description: string;
+}
+
+interface HeroProps {
+  data: {
+    id: number;
+    text: string;
+    header: HeaderProps;
+  };
+}
+
+const Hero = ({ data }: HeroProps) => {
   return (
     <section className="text-dark dark:text-light  p-6 md:p-12  min-w-full  z-0 sm:grid sm:grid-cols-8 ">
       <div className="sm:col-span-5 h-full w-full flex  flex-col">
-        <h1 className="text-6xl tracking-tight">
-          Dreaming of study abroad ? We got you covered{" "}
-        </h1>
+        <h1 className="text-6xl tracking-tight">{data.header.title}</h1>
         <div className="flex justify-start flex-col w-full">
-          <h4>drop your mail down here and we'll contact you </h4>
+          <h4>{data.header.description}</h4>
           <div className=" w-full sm:max-w-96 relative mt-6">
             <input
               type="email"

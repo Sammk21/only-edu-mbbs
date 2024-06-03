@@ -1,6 +1,9 @@
 import React from "react";
 import { Montserrat, Merriweather } from "next/font/google";
 import NewsLetter from "@/modules/newsletter";
+import { getStrapiData } from "@/utils/utils";
+// import { CKEditor } from "@ckeditor/ckeditor5-react";
+// import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
 
 const mosterrat = Montserrat({
   weight: ["300", "400", "700", "900", "100", "200", "500", "600", "800"],
@@ -12,7 +15,16 @@ const merriweather = Merriweather({
   style: "normal",
   display: "swap",
 });
-const Blog = () => {
+
+const blogQuery = "/api/articles?filters[id][$eq]=1";
+
+export default async function Blog() {
+  const data = await getStrapiData(blogQuery);
+
+  const post = data.data[0];
+
+  console.dir(post);
+
   return (
     <div className="pt-28 w-full ">
       <main
@@ -25,7 +37,7 @@ const Blog = () => {
               <h1
                 className={`${merriweather.className} text-3xl font-extrabold leading-tight text-dark lg:mb-6 lg:text-4xl dark:text-light mb-8`}
               >
-                Best practices for successful prototypes
+                {post.title}
               </h1>
               <div className=" flex  items-center mr-3 text-sm text-dark dark:text-light mb-2">
                 <img
@@ -117,7 +129,13 @@ const Blog = () => {
                 </div>
               </div>
             </header>
-            <p className="leading-relaxed">
+            {post.ckeditor_content}
+            {/* <CKEditor
+              editor={ClassicEditor}
+              data={post.ckeditor_content}
+              disabled={true}
+            /> */}
+            {/* <p className="leading-relaxed">
               Flowbite is an open-source library of UI components built with the
               utility-first classNamees from Tailwind CSS. It also includes
               interactive elements such as dropdowns, modals, datepickers.
@@ -385,7 +403,7 @@ const Blog = () => {
             <p>
               And there you have it! Everything you need to design and share
               prototypes — right in Flowbite Figma.
-            </p>
+            </p> */}
           </article>
         </div>
       </main>
@@ -891,6 +909,4 @@ const Blog = () => {
       <NewsLetter />
     </div>
   );
-};
-
-export default Blog;
+}
