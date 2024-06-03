@@ -7,6 +7,10 @@ import WhyUs from "@/modules/why-us";
 import Footer from "@/modules/footer/index";
 import NewsLetter from "@/modules/newsletter";
 
+
+
+
+
 export default function Home() {
   return (
     <div className="pt-28 w-full overflow-hidden">

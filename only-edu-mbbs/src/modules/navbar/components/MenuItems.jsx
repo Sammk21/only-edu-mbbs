@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
 import { RiArrowDownSLine } from "react-icons/ri";
 import { RiArrowRightSLine } from "react-icons/ri";
@@ -40,40 +41,45 @@ export const MenuItems = ({ items, depthLevel }) => {
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
     >
-      {items.submenu ? (
+      {items.subMenuLinks ? (
         <>
-          <button
-            className="flex justify-between hover:bg-dark/30 items-center gap-r-1"
+          <Link
+            href={items.href || "#"}
+            className=" hover:text-dark/80 items-center gap-r-1"
             type="button"
             aria-haspopup="menu"
             aria-expanded={dropdown ? "true" : "false"}
             onClick={() => setDropdown((prev) => !prev)}
           >
-            <p>{items.title}</p>{" "}
-            {depthLevel > 0 ? (
-              <RiArrowRightSLine />
-            ) : (
-              <RiArrowDownSLine
-                className={`mt-[2px] font-semibold transition duration-200 ease-in-out ${
-                  dropdown && "rotate-180"
-                } `}
-              />
-            )}
-          </button>
+            <span className=" flex justify-between items-center">
+              <p>{items.label}</p>{" "}
+              {depthLevel > 0 ? (
+                <RiArrowRightSLine />
+              ) : (
+                <RiArrowDownSLine
+                  className={`mt-[2px] font-semibold transition duration-200 ease-in-out ${
+                    dropdown && "rotate-180"
+                  } `}
+                />
+              )}
+            </span>
+          </Link>
           <Dropdown
             depthLevel={depthLevel}
-            submenus={items.submenu}
+            submenuLinks={items.subMenuLinks}
             dropdown={dropdown}
           />
         </>
       ) : (
-        <a href={items?.href}>{items.title}</a>
+        <Link href={items?.href || "#"}>{items.label}</Link>
       )}
     </li>
   );
 };
 
-const Dropdown = ({ submenus, dropdown, depthLevel }) => {
+const Dropdown = ({ subMenuLinks, dropdown, depthLevel }) => {
+  console.log(subMenuLinks);
+
   depthLevel = depthLevel + 1;
   const dropdownClass = depthLevel > 1 ? "dropdown-submenu" : "";
   return (
@@ -83,9 +89,9 @@ const Dropdown = ({ submenus, dropdown, depthLevel }) => {
       }`}
     >
       {" "}
-      {submenus.map((submenu, index) => (
+      {/* {subMenuLinks.map((submenu, index) => (
         <MenuItems items={submenu} key={index} depthLevel={depthLevel} />
-      ))}{" "}
+      ))}{" "} */}
     </ul>
   );
 };

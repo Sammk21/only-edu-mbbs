@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_shared_our_service_summaries",
+  "info": {
+    "displayName": "OurServiceSummary"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Subtitle": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "text"
+    }
+  }
+}

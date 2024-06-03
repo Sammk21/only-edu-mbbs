@@ -57,11 +57,9 @@ const TopCountryRail = () => {
             />
 
             <span className="font-bold text-sm sm:text-lg md:text-xl absolute left-1/2  items-center -translate-x-1/2 bottom-2 sm:bottom-6 z-10 text-light w-full flex justify-center gap-x-4">
-              <span className=" text-lg font-medium">USA</span>
+              <p className=" text-lg font-medium">USA</p>
               <span className="h-[3px] w-[3px] rounded-full bg-light"></span>
-              <span className=" mt-[3px] text-sm text-light">
-                499k students
-              </span>
+              <p className=" mt-[3px] text-sm text-light">499k students</p>
             </span>
             <span className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-dark via-dark/20 to-dark/0"></span>
           </div>

@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_blocks_profiles",
+  "info": {
+    "displayName": "Profiles",
+    "icon": "eye"
+  },
+  "options": {},
+  "attributes": {
+    "BackgroundImage": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "ProfileImage": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    }
+  }
+}
