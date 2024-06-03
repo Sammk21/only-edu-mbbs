@@ -38,18 +38,30 @@ export function flattenAttributes(data:any):any {
   return flattened;
 }
 
-export function getStrapiMedia(){}
 
 
 export async function getStrapiData(path: string) {
   
-  const baseUrl = `http://192.168.1.6:1337`;
+
+  const baseUrl = process.env.API_URL || `http://localhost:1337`;
   try {
-    const response = await fetch(baseUrl + path, { cache: "no-store" });
+    const response = await fetch(baseUrl + path, { cache: "no-store" }); 
     const data = await response.json();
     const flattenedData = flattenAttributes(data);
     return flattenedData;
   } catch (error) {
     console.error(error);
   }
+
+}
+
+export function getStrapiURL() {
+  return process.env.NEXT_PUBLIC_STRAPI_URL ?? "http://localhost:1337";
+}
+
+export function getStrapiMedia(url: string | null) {
+  if (url == null) return null;
+  if (url.startsWith("data:")) return url;
+  if (url.startsWith("http") || url.startsWith("//")) return url;
+  return `${getStrapiURL()}${url}`;
 }

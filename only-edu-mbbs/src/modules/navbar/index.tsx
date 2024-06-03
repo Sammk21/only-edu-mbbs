@@ -13,7 +13,6 @@ import {
   FaPinterest,
   FaTwitter,
 } from "react-icons/fa";
-import { MenuItem } from "./components/Menulist";
 import { MenuItems } from "./components/MenuItems";
 import Link from "next/link";
 import { Navigation, Dropdown, Links } from "@/types/types";

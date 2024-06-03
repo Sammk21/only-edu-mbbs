@@ -19,52 +19,52 @@
       "type": "uid",
       "targetField": "Title"
     },
-    "UniversityProfile": {
+    "universityProfile": {
       "type": "component",
-      "repeatable": true,
+      "repeatable": false,
       "component": "blocks.profiles"
     },
-    "CallToAction": {
+    "cta": {
       "type": "component",
-      "repeatable": true,
+      "repeatable": false,
       "component": "blocks.cta"
     },
-    "Header": {
-      "type": "component",
-      "repeatable": true,
-      "component": "shared.header"
-    },
-    "Overview": {
+    "header": {
       "type": "component",
       "repeatable": false,
       "component": "shared.header"
     },
-    "WhythisUniversity": {
+    "overview": {
       "type": "component",
-      "repeatable": true,
+      "repeatable": false,
+      "component": "shared.header"
+    },
+    "whythisUniversity": {
+      "type": "component",
+      "repeatable": false,
       "component": "blocks.why-us"
     },
-    "RankComparison": {
+    "rankComparison": {
       "type": "component",
       "repeatable": true,
       "component": "blocks.rank-comparison"
     },
-    "EligibilityCriteria": {
+    "eligibilityCriteria": {
       "type": "component",
       "repeatable": false,
       "component": "blocks.eligibility-card"
     },
-    "DocumentRequired": {
+    "documentRequired": {
       "type": "component",
       "repeatable": false,
       "component": "blocks.popular-courses"
     },
-    "FeesStructure": {
+    "feesStructure": {
       "type": "component",
       "repeatable": false,
       "component": "blocks.eligibility-table"
     },
-    "Faq": {
+    "faq": {
       "type": "component",
       "repeatable": true,
       "component": "blocks.faq"

@@ -3,40 +3,40 @@ import Container from "@/modules/blog-components/container";
 import PostList from "@/modules/blog-components/postlist";
 import Postlistright from "@/modules/blog-components/postlistright";
 import Link from "next/link";
-const BlogPage = () => {
+import { BlogListResponse } from "@/types/types";
+
+export default function BlogPage({ data }: BlogListResponse) {
   return (
-    <Container className="">
-      <div className="sm:flex gap-10">
-        <div className="mt-10 flex flex-col pr-0 lg:pr-14 ">
+
+       
+    <Container>
+      <h1>Only Education Blogs</h1>
+      <div className="grid gap-10 md:grid-cols-2 lg:gap-10  ">
+        {data.map((item) => (
           <PostList
-          // key={post._id}
-          // post={post}
-          // aspect="square"
+            key={item.id}
+            post={item}
+            //   aspect="landscape"
+            //   preloadImage={true}
           />
-          <PostList
-          // key={post._id}
-          // post={post}
-          // aspect="square"
-          />
-          <PostList
-          // key={post._id}
-          // post={post}
-          // aspect="square"
-          />
-          <PostList
-          // key={post._id}
-          // post={post}
-          // aspect="square"
-          />
-          <PostList
-          // key={post._id}
-          // post={post}
-          // aspect="square"
-          />
-        </div>
-        <Postlistright />
+        ))}
+      </div>
+
+      <div className="mt-10 flex justify-center mb-6">
+        <Link
+          href="/archive"
+          className="relative inline-flex items-center gap-1 rounded-full border border-borderLight bg-dark px-3 py-2 pl-4 text-sm font-medium text-light hover:bg-dark/80 focus:z-20 disabled:pointer-events-none disabled:opacity-40 dark:border-border dark:bg-foreground dark:text-light"
+        >
+          <span>View all Posts</span>
+        </Link>
+
       </div>
     </Container>
   );
 };
+
 export default BlogPage;
+
+
+
+
