@@ -12,7 +12,7 @@
       "repeatable": false,
       "component": "shared.header"
     },
-    "CriteriaList": {
+    "criteriaList": {
       "type": "component",
       "repeatable": true,
       "component": "shared.list-with-heading"

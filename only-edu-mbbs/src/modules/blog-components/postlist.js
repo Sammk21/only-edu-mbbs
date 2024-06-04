@@ -11,7 +11,12 @@ const merriweather = Merriweather({
   display: "swap",
 });
 
-export default function PostList() {
+export default function PostList({ post }) {
+  const imageUrl = "http://192.168.1.6:1337";
+  const image = post.image.url;
+
+  // const label = post.label;
+
   return (
     <section>
       <div className="border-b border-b-borderLight dark:border-b-border mt-5">
@@ -20,40 +25,39 @@ export default function PostList() {
             <div className="flex items-center gap-3">
               <div className="relative h-5 w-5 flex-shrink-0">
                 <Image
-                  src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                  alt="Author name"
+                  src={imageUrl + image}
+                  alt="Thumbnail"
                   className="rounded-full object-cover"
                   fill
                   sizes="20px"
                 />
               </div>
-              <span className="truncate text-sm">Author name</span>
+              <span className="truncate text-sm">author</span>
             </div>
           </Link>
         </div>
 
         <div className={cx("group cursor-pointer grid gap-1")}>
           <div className="flex mt-3 gap-1 sm:gap-10 justify-between">
-            <Link href="#" className="sm:w-[70%] w-[70%]">
+            <Link
+              href={`/blog/post/${post.slug}`}
+              className="sm:w-[70%] w-[70%]"
+            >
               <h2 className="font-semibold sm:text-xl text-sm mb-2 line-clamp-2">
-                High-Level System Architecture of Booking.com
+                {post.title}
               </h2>
               <p
                 className={`text-sm line-clamp-1 sm:line-clamp-3 ${merriweather.className}`}
               >
-                Hello everyone! In this article, we will take an in-depth look
-                at the possible high-level architecture of Booking.com, one of
-                the world’s leading travel and hospitality platforms. Serving
-                millions of users globally, Booking.com offers various features
-                and services that cater to diverse travel needs.
+                {post.description}
               </p>
             </Link>
             <Link
-              href="#"
+              href={`/blog/post/${post.slug}`}
               className="relative block aspect-square h-20 w-20 sm:h-28 sm:w-28"
             >
               <Image
-                src="https://images.unsplash.com/photo-1714779573259-216b0cf746be?q=80&w=3432&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                src={imageUrl + image}
                 alt="Thumbnail"
                 className="object-cover transition-all"
                 fill
@@ -67,13 +71,7 @@ export default function PostList() {
               className="flex items-center gap-1 sm:gap-2 text-xs sm:text-sm"
             >
               <div className="bg-dark/5 rounded-2xl w-fit px-2 py-1 text-[10px] sm:text-sm capitalize">
-                design
-              </div>
-              <div className="bg-dark/5 rounded-2xl w-fit px-2 py-1 text-[10px] sm:text-sm capitalize">
-                development
-              </div>
-              <div className="bg-dark/5 rounded-2xl w-fit px-2 py-1 text-[10px] sm:text-sm capitalize">
-                Architecture
+                {post.category.name}
               </div>
             </Link>
             <div className="flex sm:gap-4">

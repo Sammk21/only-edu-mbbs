@@ -13,6 +13,12 @@ const nextConfig = {
       {
         hostname: "flowbite.s3.amazonaws.com",
       },
+      {
+        hostname: "localhost",
+      },
+      {
+        hostname: "192.168.1.6",
+      },
     ],
   },
 };
