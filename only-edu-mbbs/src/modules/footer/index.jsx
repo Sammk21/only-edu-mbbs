@@ -11,7 +11,7 @@ import {
 
 import { GoDeviceMobile, GoLocation, GoMail } from "react-icons/go";
 import CallToAction from "./call-to-action";
-
+// import OnlyEduLogo from "/onlyEduLogo.svg";
 const Footer = () => {
   return (
     <footer
@@ -24,8 +24,13 @@ const Footer = () => {
           <div className="sm:px-14 px-4 py-1 row-span-4">
             <div className="row flex-col gap-y-9 sm:flex-row flex justify-between">
               <div className="flex-col">
-                <Link href="/" className="logo">
-                  <span className="text-5xl">Only edu</span>
+                <Link className="w-44 h-20 relative" href="/">
+                  <Image
+                    className="object-center object-cover "
+                    fill={true}
+                    src="/OnlyEduLogo.svg"
+                    alt="alt text"
+                  />
                 </Link>
               </div>
               <div className="flex-col flex text-sm text-dark mb-8">

@@ -17,6 +17,7 @@ import { MenuItems } from "./components/MenuItems";
 import Link from "next/link";
 import { Navigation, Dropdown, Links } from "@/types/types";
 import { DropDownItems } from "./components/Dropdown";
+import Image from "next/image";
 
 interface NavbarProps {
   navigation: Navigation;
@@ -68,13 +69,22 @@ const Navbar = ({ navigation, dropdown }: NavbarProps) => {
           isScrolled ? "rounded-t-none h-[4rem] " : "rounded-t-3xl h-[5rem]"
         } `}
       >
-        <Link href="/">
-          <span className="font-medium text-2xl">Only edu</span>
+        <Link className="w-44 h-20 relative" href="/">
+          {/* <span className="font-medium text-2xl">Only edu</span> */}
+          <Image
+            className="object-center object-cover "
+            fill={true}
+            src="/OnlyEduLogo.svg"
+            alt="alt text"
+          />
         </Link>
 
         <div>
           <ul className=" hidden md:flex  text-sm font-normal">
             <ul className="flex justify-center items-center">
+              {navigation.links.map((link: Links) => {
+                return <MenuItems items={link} key={link.id} />;
+              })}
               {dropdown.map((link: Dropdown) => {
                 const depthLevel = 0;
                 return (
@@ -84,9 +94,6 @@ const Navbar = ({ navigation, dropdown }: NavbarProps) => {
                     depthLevel={depthLevel}
                   />
                 );
-              })}
-              {navigation.links.map((link: Links) => {
-                return <MenuItems items={link} key={link.id} />;
               })}
             </ul>
           </ul>
